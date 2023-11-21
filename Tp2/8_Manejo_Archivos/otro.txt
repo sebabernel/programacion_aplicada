@@ -1,0 +1,2 @@
+Hola soy el archivo sebas, como se puede ver el texto que ingresa en el otro 
+archivo se sobrepone sobre el anterior
