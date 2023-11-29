@@ -16,8 +16,12 @@ print(funcion())
 
 # 3.2.
 
-from . import modulo2
-modulo2.funcion2()
+
+from . import funcion2
+
+print(funcion2())
+
+
 
 #3.3.
 
@@ -51,4 +55,4 @@ from .modulo1 import funcion_ImportAlias as func_Alias
 
 print(modulo1.func_Alias)
 # Se importa una función o variable específica del módulo
-# y se le asigna un alias, utilizando la importación relativa.
+# y se le asigna un alias, utilizando la importación relativa."""

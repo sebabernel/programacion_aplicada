@@ -13,11 +13,11 @@ def precondiciones_decorator(*condiciones):
                 # Si se cumplen las condiciones ejecuta la funcion original
                 resultado = func(*args, **kwargs)
                 # Retornamos el resultado de la funcion
-                return resultado
+            return resultado
             # Devolvemos la funcion que lo envuelve
-            return wrapper
+        return wrapper
         # Delvolvemos el decorardor
-        return decorator
+    return decorator
     
 # Funcon de ejemplo que tiene precondiciones, que x sea mayor a 0
 @precondiciones_decorator(lambda x: x > 0)
@@ -25,6 +25,7 @@ def funcion_con_precondiciones(x):
     print(f"La funcion original ha sido ejecutada con x={x}")
 
 # Llamar a la funcion decorada con precondiciones
+funcion_con_precondiciones(4)
 funcion_con_precondiciones(3)  
 # otra con condicion fuera de rango
 #funcion_con_precondiciones(-4)

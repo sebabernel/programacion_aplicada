@@ -14,8 +14,9 @@ def registrar(func):
         # Llama a la funcion original y guarda el resultado 
         resultado = func(*args, **kwargs)
         # Crear un registro con el nombre de la funcion, los argumentos y el resultado
-        registro = f" {func.__name__}({', '.join(map(repr, args))}{', ' if args and kwargs else ''}{', '.join(f'{k}= {v!r}' for k, v in kwargs.items())}) -> {resultado!r}"
+        
         # Para añadir el registro a la lista de registros
+        registro = f"{func.__name__}({', '.join(map(repr, args))}{', ' if args and kwargs else ''}{', '.join(f'{k}= {v!r}' for k, v in kwargs.items())}) -> {resultado!r}"
         registros.append(registro)
         # Devuelve el resultado
         return resultado

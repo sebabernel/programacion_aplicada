@@ -7,12 +7,12 @@ print("Ejercicio: 9.1")
 def func_1():
     for _ in range(5):
         print("funcion 1")
-        time.sleep(1)
+        time.sleep(2) # Simula entrada y salida
 
 def func_2():
     for _ in range(5):
         print("2 Funcion activada")
-        time.sleep(1)
+        time.sleep(2) # simula entrada y salida
 
 # Creamos los hilos, cada uno para una funcion
 hilo_1 = threading.Thread(target=func_1)

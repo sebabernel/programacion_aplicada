@@ -13,5 +13,5 @@ def sum_digits(num):
         return sum(int(digit) for digit in str(num - 3))
     
 
-num = 12
+num = 121
 print(sum_digits(num))

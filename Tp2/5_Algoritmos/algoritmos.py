@@ -1,6 +1,6 @@
-    
+"""Escribe una función que sume los dígitos de un número pares de un  número entero. Si el número es  impar, restarle 3 y  sumarlo. Si el número  da negativo, sumar 1"""
 
-def suma_digitos_operacion(self, numero):
+def suma_digitos_operacion(numero):
         # Condicion para verificar si el numero es par o impar
         
     if numero % 2 == 0:
@@ -19,8 +19,9 @@ def suma_digitos_operacion(self, numero):
 
 numero_par = 2468
 resultado_par = suma_digitos_operacion(numero_par)
-print(f"Resultado para numero par {numero_par}")
+print(f"Resultado para numero par {resultado_par}")
 
 numero_impar = 1357
 resultado_impar = suma_digitos_operacion(numero_impar)
+print(f"Resultado para numero par {resultado_impar}")
         

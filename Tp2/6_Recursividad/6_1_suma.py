@@ -12,5 +12,5 @@ def suma_recursiva(numero, contar = 1, sumar = 0):
 
     
 
-print(suma_recursiva(7))    
+print(suma_recursiva(15))    
         

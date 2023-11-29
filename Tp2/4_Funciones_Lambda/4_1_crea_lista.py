@@ -8,3 +8,16 @@ resultado = list(map(lambda x: x * 2, numeros))
 
 # Imprimimos la nueva lista
 print(resultado)
+
+num = [3, 6, 9, 10, 13, 15]
+
+resul = list(map(lambda x: x ** 2, num))
+
+print(resul)
+
+
+listar_num = [5, 10, 15, 20, 25]
+
+sum_num = list(map(lambda x: x ** 3, listar_num))
+
+print(sum_num)

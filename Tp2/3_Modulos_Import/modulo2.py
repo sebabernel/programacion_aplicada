@@ -1,6 +1,6 @@
 import modulo1 as mod1
 
-print(mod1.varialbe_modulo1)
+#print(mod1.varialbe_modulo1)
 
 
 def funcion2():

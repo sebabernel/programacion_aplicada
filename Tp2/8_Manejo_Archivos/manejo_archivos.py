@@ -29,6 +29,7 @@ if __name__ == "__main__":
   copiar_contenido(archivo_entrada, archivo_salida)
 
 """8.2.   Escribe un programa que abra un archivo de texto, cuente cuántas  palabras contiene y muestre el resultado en la pantalla."""
+
 print("8.2")
 
 def contar_palabras(nombre_archivo):
