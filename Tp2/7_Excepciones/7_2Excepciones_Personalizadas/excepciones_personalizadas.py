@@ -5,7 +5,7 @@
 class DivisionPorCero(Exception):
     def __init__(self, mensaje = "No se puede divir por cero"):
         self.mensaje = mensaje
-        super().__init__(self, mensaje)
+        super().__init__(mensaje)
 
     def realizar_division():
         try:
@@ -25,12 +25,13 @@ class DivisionPorCero(Exception):
         except ValueError:
             # Maneja la excepcion si no ingresa un numero
             print("Ingrese numeros validos")
+DivisionPorCero.realizar_division()
 
 # 7.1.2
 class IndiceFuersaDeRangoError(Exception):
-    def __init__(self, mensaje = "Indiceguera de rango."):
-        self.mensae = mensaje
-        super().__init__(self, mensaje)
+    def __init__(self, mensaje = "Indice de rango."):
+        self.mensaje = mensaje
+        super().__init__(mensaje)
 
     def acceder_a_indice():
         # Crear una lista de números
@@ -55,6 +56,7 @@ class IndiceFuersaDeRangoError(Exception):
             # Maneja la excepción si el usuario ingresa algo que no es un número
             print("Error: Ingrese un índice válido.")
             # Maneja la excepción si el usuario ingresa algo que no es un número
+IndiceFuersaDeRangoError.acceder_a_indice()
 
 
 
@@ -62,7 +64,7 @@ class IndiceFuersaDeRangoError(Exception):
 class EntradaNoNumericaError(Exception):
     def __init__(self, mensaje = "Ingrese numeros validos."):
         self.mensaje = mensaje
-        super().__init__(self, mensaje)
+        super().__init__(mensaje)
             
     def convertir_a_numero():
         try:
@@ -78,12 +80,14 @@ class EntradaNoNumericaError(Exception):
             print("Error: La cadena no es un número válido.")
             # Aplicamos recursividad
 
+EntradaNoNumericaError.convertir_a_numero()
+
 
 # 7.1.4
 class ArchivoNoEncontradoError(Exception):
     def __init__(self, mensaje = "El archivo no existe."):
         self.mensaje = mensaje
-        super().__init__(self, mensaje)
+        super().__init__(mensaje)
             
     def abrir_archivo():
         try:
@@ -96,12 +100,13 @@ class ArchivoNoEncontradoError(Exception):
         except FileNotFoundError:
             print("Error: El archivo no existe.")
 
+ArchivoNoEncontradoError.abrir_archivo()
 
 # 7.1.5
 class ClaveNoExisteError(Exception):
     def __init__(self, mensaje = "La clave no existe"):
         self.mensaje = mensaje
-        super().__init__(self, mensaje)
+        super().__init__(mensaje)
 
             
     def acceder_a_valor():
@@ -117,5 +122,10 @@ class ClaveNoExisteError(Exception):
         except KeyError:
             # Maneja la excepción si la clave no existe en el diccionario
             print("Error: La clave no existe.")
-            # Practicamos recursividad
-    
+            ClaveNoExisteError.acceder_a_valor()
+            10
+            
+            
+            
+ClaveNoExisteError.acceder_a_valor()
+

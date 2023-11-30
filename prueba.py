@@ -232,23 +232,107 @@ def minimoMult(a, b):
     
 print(minimoMult(5, 10))
 
-def invertir_cadena(cadena):
-    if len(cadena) <= 1:
-        return cadena
-    else:
-        return cadena[-1] + invertir_cadena(cadena[: -1])
-    
-cadena_original = "Hora de hacer las practicas"
-cadena_invertir = invertir_cadena(cadena_original)
-
-print(cadena_original)
-probando()
-print(cadena_invertir)
 
 # Practica
 
-def invertirCad(cadena):
+def cad(cadena):
     if len(cadena) <= 1:
         return cadena
     else:
-        return cadena[-1] + invertir_cadena(cadena[: -1])
+        return cadena[-1] + cad(cadena[: -1])
+
+testop = "ragul nugal a yov aloh "
+darvuelta = cad(testop)
+
+print(darvuelta)
+"""**************   Excepciones **************"""
+print("********************* Excepciones  ************")
+
+class DivisionPorCero(Exception):
+        
+    def acceder_a_valor():
+
+        try:
+            numerador = float(input("Ingrese un numero: "))
+            denominador = float(input("Ingrese segundo numero"))
+
+            resultado = numerador / denominador
+            print(f"El resultado de la division es {resultado}")
+        
+        except ZeroDivisionError:
+            print("No se puede dividir por cero")
+        except ValueError:
+            print("Ingrese numeros validos")
+            DivisionPorCero.acceder_a_valor()
+
+
+class indiceFueraDeRango(Exception):
+    def __init__(self, mensaje = "Indice de rango. "):
+        self.mensaje = mensaje
+        super().__init__(self, mensaje)
+
+    def acceder_a_indice():
+        numeros = [10, 20, 30, 40, 50]
+        try: 
+            indice = int(input("Ingrese un indice para acceder a la lista: "))
+
+            elemento = numeros[indice]
+
+            print(f"Elemento en el indice {indice}: {elemento}")
+
+        except IndexError:
+            print("Error: El indice está fuera de rango")
+
+        except ValueError:
+            print("Error: Ingrese un indice valido.")
+
+class EntradaNoNumericaError(Exception):
+    def __init__(self, mensaje = "Ingrese numeros validos."):
+        self.mensaje = mensaje
+        super().__init__(self, mensaje)
+
+    def convertir_a_numero():
+        try:
+            cadena_numero = input("Ingrese una cadena que represente un número: ")
+            numero = float(cadena_numero)
+
+            print(f"Numero ingresado: {numero}")
+        except ValueError:
+            print("Error: La cadena no es un numero valido.")
+
+class ArchivoNoEncontradoError(Exception):
+    def __init__(self, mensaje = "El archivo no existe."):
+        self.mensaje = mensaje
+        super().__init__(mensaje)
+
+    def abrir_archivo():
+        try:
+            archivo = open("archivo.txt", "r")
+            contenido = archivo.read()
+            archivo.close()
+            print(contenido)
+        except FileNotFoundError:
+            print("Error: El archivo no existe.")
+
+class ClaveNoExisteError(Exception):
+    def __init__(self, mensaje = "La clave no existe"):
+        self.mensaje = mensaje
+        super().__init__(mensaje)
+
+    def acceder_a_valor():
+        diccionario = {"nombre": "Juan", "edad": 30, "ciudad": "Buenos Aires"}
+        clave = input("Ingrese una clave: ")
+
+        try:
+            valor = diccionario[clave]
+            print(f"El valor de {clave} es {valor}")
+        except KeyError:
+            print("Error: La clave no existe.")
+            ClaveNoExisteError.acceder_a_valor()
+        
+    
+ClaveNoExisteError.acceder_a_valor()
+EntradaNoNumericaError.convertir_a_numero()
+indiceFueraDeRango.acceder_a_indice()
+DivisionPorCero.acceder_a_valor()
+ArchivoNoEncontradoError.abrir_archivo()
