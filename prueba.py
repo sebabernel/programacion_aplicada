@@ -1,3 +1,4 @@
+# Archivo para correr todas funciones y conceptos aprendidos
 import time
 print("************** Decoradores **************")
 def predicion(*condiciones):
@@ -249,7 +250,7 @@ print(darvuelta)
 print("********************* Excepciones  ************")
 
 class DivisionPorCero(Exception):
-        
+    pass 
     def acceder_a_valor():
 
         try:
@@ -269,7 +270,7 @@ class DivisionPorCero(Exception):
 class indiceFueraDeRango(Exception):
     def __init__(self, mensaje = "Indice de rango. "):
         self.mensaje = mensaje
-        super().__init__(self, mensaje)
+        super().__init__(mensaje)
 
     def acceder_a_indice():
         numeros = [10, 20, 30, 40, 50]
@@ -289,7 +290,7 @@ class indiceFueraDeRango(Exception):
 class EntradaNoNumericaError(Exception):
     def __init__(self, mensaje = "Ingrese numeros validos."):
         self.mensaje = mensaje
-        super().__init__(self, mensaje)
+        super().__init__(mensaje)
 
     def convertir_a_numero():
         try:
